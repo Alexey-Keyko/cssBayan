@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  background-color: rgb(235, 229, 221);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 10px;
+}
+
+.wrapper:hover .plus {
+  display: block;
+}
+
+.wrapper:hover .text {
+  color: black;
+}
+
+.title {
+  text-align: left;
+  width: 90%;
+  font-family: "Bangers", sans-serif;
+}
+
+.label {
+  width: 90%;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid grey;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  height: 100px;
+  overflow: hidden;
+}
+
+.first__block {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  border-top: 2px solid grey;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  height: 500px;
+  overflow: hidden;
+}
+
+.block:hover {
+  height: 500px;
+}
+
+input[type="radio"]:checked + .block {
+  height: 500px;
+}
+
+.block:hover .img {
+  height: 400px;
+  width: 400px;
+}
+
+input[type="radio"]:checked + .block .img {
+  height: 400px;
+  width: 400px;
+}
+
+.block:hover .text {
+  color: black;
+}
+
+input[type="radio"]:checked + .block .text {
+  color: black;
+}
+
+.block:hover .plus {
+  transform: rotate(45deg);
+}
+
+input[type="radio"]:checked + .block .plus {
+  transform: rotate(45deg);
+}
+
+.block__title {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 0;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.plus {
+  display: none;
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.img {
+  height: 0;
+  width: 0;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 30px;
+  font-family: "Roboto", sans-serif;
+  color: rgb(62, 62, 240);
+  cursor: pointer;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
