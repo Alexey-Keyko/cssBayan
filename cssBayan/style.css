@@ -127,3 +127,27 @@ input[type="radio"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
+
+@media (max-width: 768px) {
+  input[type="radio"]:checked + .block {
+    height: 350px;
+  }
+
+  input[type="radio"]:checked + .block .img {
+    height: 250px;
+    width: 250px;
+  }
+
+  .block {
+    height: 40px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+
+  .plus {
+    height: 20px;
+    width: 20px;
+  }
+}
