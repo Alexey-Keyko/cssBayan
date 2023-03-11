@@ -9,7 +9,7 @@ body {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .wrapper:hover .plus {
@@ -24,6 +24,7 @@ body {
   text-align: left;
   width: 90%;
   font-family: "Bangers", sans-serif;
+  font-size: 2.5rem;
 }
 
 .label {
@@ -36,10 +37,10 @@ body {
   width: 100%;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid grey;
+  border-top: 0.125rem solid grey;
   position: relative;
   transition: all 0.3s ease-in-out;
-  height: 100px;
+  height: 6.25rem;
   overflow: hidden;
 }
 
@@ -49,29 +50,29 @@ body {
   width: 90%;
   align-items: center;
   justify-content: center;
-  border-top: 2px solid grey;
+  border-top: 0.125rem solid grey;
   position: relative;
   transition: all 0.3s ease-in-out;
-  height: 500px;
+  height: 31.25rem;
   overflow: hidden;
 }
 
 .block:hover {
-  height: 500px;
+  height: 31.25rem;
 }
 
 input[type="radio"]:checked + .block {
-  height: 500px;
+  height: 31.25rem;
 }
 
 .block:hover .img {
-  height: 400px;
-  width: 400px;
+  height: 25rem;
+  width: 25rem;
 }
 
 input[type="radio"]:checked + .block .img {
-  height: 400px;
-  width: 400px;
+  height: 25rem;
+  width: 25rem;
 }
 
 .block:hover .text {
@@ -93,17 +94,16 @@ input[type="radio"]:checked + .block .plus {
 .block__title {
   display: flex;
   flex-direction: row;
-  position: absolute;
-  top: 0;
   justify-content: space-between;
   width: 100%;
   align-items: center;
+  padding-top: 0.625rem;
 }
 
 .plus {
   display: none;
-  height: 40px;
-  width: 40px;
+  height: 2rem;
+  width: 2rem;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -116,7 +116,7 @@ input[type="radio"]:checked + .block .plus {
 }
 
 .text {
-  font-size: 30px;
+  font-size: 2rem;
   font-family: "Roboto", sans-serif;
   color: rgb(62, 62, 240);
   cursor: pointer;
@@ -124,30 +124,45 @@ input[type="radio"]:checked + .block .plus {
 
 input[type="radio"]:checked,
 input[type="radio"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
+  display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   input[type="radio"]:checked + .block {
-    height: 350px;
+    height: 21.875rem;
   }
 
   input[type="radio"]:checked + .block .img {
-    height: 250px;
-    width: 250px;
+    height: 15.625rem;
+    width: 15.625rem;
   }
 
   .block {
-    height: 40px;
+    height: 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
   }
 
   .text {
-    font-size: 15px;
+    font-size: 1.3rem;
   }
 
   .plus {
-    height: 20px;
-    width: 20px;
+    height: 1.25rem;
+    width: 1.25rem;
   }
 }
+
+@media (max-width: 35.5rem) {
+
+    .text {
+        font-size: 0.93rem;
+      }
+
+      .title{
+        font-size: 1.7rem;
+      }
+}
+
