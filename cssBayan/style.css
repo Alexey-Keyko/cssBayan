@@ -129,12 +129,12 @@ input[type="radio"]:not(:checked) {
 
 @media (max-width: 48rem) {
   input[type="radio"]:checked + .block {
-    height: 21.875rem;
+    height: 17rem !important;
   }
 
   input[type="radio"]:checked + .block .img {
-    height: 15.625rem;
-    width: 15.625rem;
+    height: 15.625rem !important;
+    width: 15.625rem !important;  
   }
 
   .block {
@@ -153,31 +153,71 @@ input[type="radio"]:not(:checked) {
     height: 1.25rem;
     width: 1.25rem;
   }
+
+  .block:hover {
+    height: 2.5rem !important;
+  }
 }
 
 @media (max-width: 35.5rem) {
+  .text {
+    font-size: 0.93rem;
+  }
 
-    .text {
-        font-size: 0.93rem;
-      }
+  .title {
+    font-size: 1.7rem;
+  }
 
-      .title{
-        font-size: 1.7rem;
-      }
+  .block:hover {
+    height: 2.5rem;
+  }
 }
 
 @media (max-width: 1080px) {
 
-  .wrapper:hover .plus {
-    cursor: none;
-  }
-  
-  .wrapper:hover .text {
-    cursor: none;
+  .text {
+    color: blue;
   }
 
   .plus {
     display: block;
   }
-}
 
+  .block:hover {
+    height: 6.25rem;
+  }
+
+  .block:hover .img {
+    height: 0;
+    width: 0;
+  }
+
+  .block:hover .text {
+    color:blue;
+  }
+
+  .block:hover .plus {
+    transform: rotate(0);
+  }
+
+  input[type="radio"]:checked + .block .text {
+    color: black ;
+  }
+
+  input[type="radio"]:checked + .block {
+    height: 31.25rem;
+  }
+
+  input[type="radio"]:checked + .block .img {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  input[type="radio"]:checked + .block .plus {
+    transform: rotate(45deg);
+  }
+
+  .wrapper:hover .text {
+    color: blue;
+  }
+}
