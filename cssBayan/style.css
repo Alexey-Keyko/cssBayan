@@ -166,3 +166,18 @@ input[type="radio"]:not(:checked) {
       }
 }
 
+@media (max-width: 1080px) {
+
+  .wrapper:hover .plus {
+    cursor: none;
+  }
+  
+  .wrapper:hover .text {
+    cursor: none;
+  }
+
+  .plus {
+    display: block;
+  }
+}
+
