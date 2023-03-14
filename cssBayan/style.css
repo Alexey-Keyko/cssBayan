@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+body {
+  background-color: rgb(235, 229, 221);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.wrapper:hover .plus {
+  display: block;
+}
+
+.wrapper:hover .text {
+  color: black;
+}
+
+.title {
+  text-align: left;
+  width: 90%;
+  font-family: "Bangers", sans-serif;
+  font-size: 2.5rem;
+}
+
+.label {
+  width: 90%;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.125rem solid grey;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  height: 6.25rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.first__block {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  border-top: 0.125rem solid grey;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  height: 31.25rem;
+  overflow: hidden;
+}
+
+.block:hover {
+  height: 31.25rem;
+}
+
+input[type="radio"]:checked + .block {
+  height: 31.25rem;
+}
+
+.block:hover .img {
+  height: 25rem;
+  width: 25rem;
+}
+
+input[type="radio"]:checked + .block .img {
+  height: 25rem;
+  width: 25rem;
+}
+
+.block:hover .text {
+  color: black;
+}
+
+input[type="radio"]:checked + .block .text {
+  color: black;
+}
+
+.block:hover .plus {
+  transform: rotate(45deg);
+}
+
+input[type="radio"]:checked + .block .plus {
+  transform: rotate(45deg);
+}
+
+.block__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  padding-top: 0.625rem;
+}
+
+.plus {
+  display: none;
+  height: 2rem;
+  width: 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.img {
+  height: 0;
+  width: 0;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.text {
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  color: rgb(62, 62, 240);
+  cursor: pointer;
+}
+
+input[type="radio"]:checked,
+input[type="radio"]:not(:checked) {
+  display: none;
+}
+
+@media (max-width: 48rem) {
+  input[type="radio"]:checked + .block {
+    height: 17rem !important;
+  }
+
+  input[type="radio"]:checked + .block .img {
+    height: 15.625rem !important;
+    width: 15.625rem !important;  
+  }
+
+  .block {
+    height: 2.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .text {
+    font-size: 1.3rem;
+  }
+
+  .plus {
+    height: 1.25rem;
+    width: 1.25rem;
+  }
+
+  .block:hover {
+    height: 2.5rem !important;
+  }
+}
+
+@media (max-width: 35.5rem) {
+  .text {
+    font-size: 0.93rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+  }
+
+  .block:hover {
+    height: 2.5rem;
+  }
+}
+
+@media (max-width: 1080px) {
+
+  .text {
+    color: blue;
+  }
+
+  .plus {
+    display: block;
+  }
+
+  .block:hover {
+    height: 6.25rem;
+  }
+
+  .block:hover .img {
+    height: 0;
+    width: 0;
+  }
+
+  .block:hover .text {
+    color:blue;
+  }
+
+  .block:hover .plus {
+    transform: rotate(0);
+  }
+
+  input[type="radio"]:checked + .block .text {
+    color: black ;
+  }
+
+  input[type="radio"]:checked + .block {
+    height: 31.25rem;
+  }
+
+  input[type="radio"]:checked + .block .img {
+    height: 25rem;
+    width: 25rem;
+  }
+
+  input[type="radio"]:checked + .block .plus {
+    transform: rotate(45deg);
+  }
+
+  .wrapper:hover .text {
+    color: blue;
+  }
+}
